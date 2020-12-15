@@ -8,7 +8,7 @@ function Parent(props) {
     return(
         <div>
             Parent Component
-            <Child number = {props.number}/>
+            <Child />
         </div>
     );
 }

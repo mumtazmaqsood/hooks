@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Parent from './Parent';
 import { useState } from 'react';
+import ValueContext from './ValueContext';
 
 
 //here is num=45, need to use by child.js , so first this num need to pass to parent element
@@ -10,13 +11,16 @@ import { useState } from 'react';
 //->child  
 
 function App() {
-  let [num, setNum] = useState(45);
+  //let [num, setNum] = useState(45);
+  let value = 70;
   return (
+    //this value is avaliable to all the child components 
+    <ValueContext.Provider value = {value}> 
     <div className="App">
       <h1>Hello world!</h1>
-      <Parent number={num}/>
-      <button onClick={()=>{setNum(++num)}}>Count Number</button>
+      <Parent />
     </div>
+    </ValueContext.Provider>
   );
 }
 
