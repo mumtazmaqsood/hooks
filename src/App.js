@@ -12,7 +12,10 @@ import ValueContext from './ValueContext';
 
 function App() {
   //let [num, setNum] = useState(45);
-  let value = 70;
+  //let value = 70;
+
+  //its has value & function 
+  let value = useState(80)
   return (
     //this value is avaliable to all the child components 
     <ValueContext.Provider value = {value}> 
